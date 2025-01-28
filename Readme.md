@@ -145,7 +145,7 @@ Default
 ```
 ---
 
-## NPM Sıklıkla Kullanılan Komutlar
+## NPM Sıklıkla Kullanılan Komutlar-1
 ```sh
 npm search express
 npm install express
@@ -158,25 +158,41 @@ npm install express --save-dev # Save
 
 npm install
 npm i
+
 npm update
 npm update express
 
-npm start
-npm test
-
 npm uninstall express
 npm uninstall express@4.16.1
+```
+---
 
+
+## NPM Sıklıkla Kullanılan Komutlar-2
+```sh
 npm list
 npm list -g            # Globalde ben ne paketleri yüklemişim
 npm list -g --depth=0  # Globalde sadece ana branch'e yüklediklerimi bana göster
-
 
 npm root                 # Local projemizdeli node_modules kütüphanesini göstersin
 npm root -g              # GLocal projemizdeli node_modules kütüphanesini göstersin
 Global node_modules: C:\Users\Hamit-Mizrak\AppData\Roaming\npm\node_modules
 ```
 ---
+
+
+## NPM Sıklıkla Kullanılan Komutlar-3
+```sh
+npm update     # package.json içindeki dosyalardaki paketleri günceller
+npm outdated   # Projede eskiyen veya güncellenmesi gereken paketleride gösterir
+npm audit      # BAğımlılıkların gücenlik analizleri rapor eder
+npm audit fix  # Belirlenen güvenlik açıklarını otomatik olarak düzeltir.
+npm dedupe     # Bağımlılıkların tekrarlanan kopyalarını temizler.
+npm info <paket-adi> # Belirli paketin detaylı bilgilerini gösterir.
+npm cache clean --force #npm önbelleğini temizler.
+```
+---
+
 
 ## Npm Package Install (Local) 
 ```sh
@@ -191,36 +207,41 @@ npm install body-parser
 # https://www.npmjs.com/
 npm i body-parser compression cors csurf cookie-parser  dotenv ejs  express express-rate-limit  --save  
 npm list 
-
 npm i helmet mongodb morgan mongoose swagger-jsdoc swagger-ui-express  typescript  winston --save  
 npm list 
+npm i nodemon typescript --save-dev
 
-npm i body-parser compression cors csurf cookie-parser  dotenv ejs  express express-rate-limit helmet mongodb morgan mongoose swagger-jsdoc swagger-ui-express  typescript  winston --save 
-
-npm i nodemon --save-dev
-
+npm i body-parser compression cors csurf cookie-parser  dotenv ejs  express express-rate-limit helmet mongodb morgan mongoose swagger-jsdoc swagger-ui-express  winston --save 
+npm list  
+npm i nodemon typescript --save-dev
 npm list  
 ```
 ---
 
 ## Npm Package Install (Global)
 ```sh
-npm list  
-npm list -g 
-npm root 
+npm list
+npm list -g
+npm root
 npm root -g
 
-npm i body-parser compression cors csurf cookie-parser  dotenv ejs  express express-rate-limit  -g    
-npm i helmet mongodb morgan mongoose swagger-jsdoc swagger-ui-express  typescript  winston -g  
+npm i body-parser compression cors csurf cookie-parser  dotenv ejs  express express-rate-limit  -g
+npm list -g
+npm i helmet mongodb morgan mongoose swagger-jsdoc swagger-ui-express  typescript  winston -g
+npm list -g
+npm i nodemon typescript --save-dev -g
+npm list -g
 
-npm i body-parser compression cors csurf cookie-parser  dotenv ejs  express express-rate-limit helmet mongodb morgan mongoose swagger-jsdoc swagger-ui-express  typescript  winston -g 
+npm i body-parser compression cors csurf cookie-parser  dotenv ejs  express express-rate-limit helmet mongodb morgan mongoose swagger-jsdoc swagger-ui-express  winston -g 
+npm list -g 
+npm i nodemon typescript --save-dev -g
 npm list -g 
 
 ```
 ---
 
 
-## Konu
+## package.json içinden Script yazmak
 ```sh
 
 ```
