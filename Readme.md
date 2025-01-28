@@ -139,10 +139,10 @@ Default
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
+},
+  {"keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC"  
 }
 ```
 ---
