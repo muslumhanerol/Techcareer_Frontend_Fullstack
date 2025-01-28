@@ -5,9 +5,11 @@
 
 ## Version
 ```sh
+code .
 git -v
 node -v
 npm -v
+tsc --version
 ```
 ---
 
@@ -167,6 +169,9 @@ npm uninstall express@4.16.1
 ```
 ---
 
+## npm delete
+
+
 
 ## NPM Sıklıkla Kullanılan Komutlar-2
 ```sh
@@ -246,7 +251,7 @@ npm list -g
 ```
 ---
 
-## Konu
+## Typescript
 ```sh
 
 ```
