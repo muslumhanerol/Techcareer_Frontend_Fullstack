@@ -46,8 +46,10 @@ html {
 }
 
 body {
-  background-color: var(--template-color);
-  color: #ffffff;
+  /* background-color: var(--template-color); */
+  background-color: var(--template-bg);
+  /* color: #ffffff; */
+  color: var(--template-color);
   font-family: "Crimson Text", serif;
   font-size: 1.2rem;
   line-height: 1.7;
@@ -99,6 +101,7 @@ img:hover {
 }
 
 /* #### Line Clamp ################################################################# */
+/* Paragrafların kaç satır gösterileceği belirlenir. index.html de class olarak ekle. */
 .line-clamp4 {
   display: -webkit-box;
   overflow: hidden;
@@ -132,13 +135,15 @@ img:hover {
 #navbar_first {
   max-height: 4rem;
   max-width: 100% !important;
-  background-color: var(--first-navbar_first-bg);
+  /* background-color: var(--first-navbar_first-bg); */
+  background-color: var(--template-color);
   color: var(--white);
   padding: 1.5rem;
 }
 
 #navbar_first #first_left {
   float: left;
+
 }
 
 #navbar_first #first_rigt {
@@ -155,8 +160,18 @@ img:hover {
 
 #navbar_first span {
   margin-right: 2.1rem;
+
 }
 
+#navbar_second span {
+  color: var(--light);
+  font-size: 1.5rem;
+  margin: 10px;
+}
+
+#navbar_second i {
+  color: var(--green);
+}
 
 /* #### Header ################################################################# */
 
