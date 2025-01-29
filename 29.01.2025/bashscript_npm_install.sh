@@ -1,4 +1,4 @@
-##Bu yüklemeleri yapmak için terminalde ./bashscript_npm_install.sh komutunu çalıştır.
+
 #!/bin/bash
 
 # Shebang (#!/): Betiğin Bash kabuğu ile çalışacağını gösterir.
@@ -331,6 +331,7 @@ npm_global_save
 #####################################################################################################
 # Typescript (Install)
 typescript_install() {
+    
     # Geriye Sayım
     ./bashscript_countdown.sh
     #if [ -f "./bashscript_countdown.sh" ]; then
