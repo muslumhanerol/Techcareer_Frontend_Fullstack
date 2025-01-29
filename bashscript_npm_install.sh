@@ -1,3 +1,4 @@
+## Çalıştırmak için terminale ./bashscript_npm_install.sh yaz.
 
 #!/bin/bash
 
