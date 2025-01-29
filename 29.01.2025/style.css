@@ -1,0 +1,105 @@
+/*
+Project made date: 29/01/2025
+name: Blog
+Semantic Version: v1.0.0
+Description: Blog
+*/
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+.root {
+    --template-bg: #f9ecec;
+    --template-color: #201f1f;
+
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 15px;
+}
+
+body {
+    background-color: var(--template-color);
+    color: var(--template-color);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2 rem;
+    /* satır arası boşluğu */
+    line-height: 1.7;
+    position: relative;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+p {
+    /* color: var(--template-color); */
+    text-align: justify;
+    margin: 2rem 0.9rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+    font-family: "Crimson Text", serif;
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+}
+
+i {
+    font-size: 1.5rem;
+    opacity: 0.9;
+}
+
+img {
+    max-width: var(--max-width);
+    height: auto;
+}
+
+img:hover {
+    cursor: pointer;
+
+}
+
+.my_clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+/* Uzun yazılarda istenilen satır kadar gösterir sonuna ... ekler. */
+.line-clamp4 {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+
+}
+
+/*### Navbar ##########################################################*/
+#navbar {
+    max-height: 3rem;
+    max-width: 100% !important;
+}
+
+#navbar ul li {
+    display: inline-block;
+}
+
+#navbar i {
+    margin-right: 1.5rem;
+}
+
+
+
+/*### Header ##########################################################*/
+
+/*### Main ##########################################################*/
+
+/*### Footer ##########################################################*/
