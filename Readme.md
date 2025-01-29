@@ -2,7 +2,14 @@
 
 [GitHub Address](https://github.com/hamitmizrak/2025_techcareer_frontend_fullstack_1.git)
 [Mongo Database]()
+[Font Awesome](https://fontawesome.com/search?ic=free)
+[Google Font](https://fonts.google.com/selection/embed)
+[Bootstrap](https://getbootstrap.com/)
+[Box Shadow Online](https://cssgenerator.pl/en/box-shadow-generator/)
 ---
+
+# Typescript başlat
+npm run dev:paralel
 
 ## Version
 ```sh
@@ -51,6 +58,25 @@ Prettier ESLint            => Rebecca Vest
 Rainbow Brackets           => MHammed Talhaouy
 ```
 ---
+
+## VSCode settings.json
+```sh
+        "emmet.includeLanguages": {
+        "javascript": "html",
+        "javascriptreact": "html",
+        "typescriptreact": "html"
+    },
+    "emmet.triggerExpansionOnTab": true,
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": true
+    },
+```
+---
+
+
+
 
 ## Teknoloji İsimleri
 ```sh

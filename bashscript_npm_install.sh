@@ -1,4 +1,4 @@
-# Tüm yüklemeleri yapmak için terminalde ./bashscript_npm_install.sh yazın
+
 #!/bin/bash
 
 # Shebang (#!/): Betiğin Bash kabuğu ile çalışacağını gösterir.
@@ -18,6 +18,7 @@ NPM_COMPILER="Npm Compiler"
 TYPESCRIPT="Typescript Install"
 PACKAGE_JSON="package.json"
 SERVER_START="server start lite-server"
+MONGO_ENV="Mongo ENV"
 
 ###################################################
 # Color
@@ -42,6 +43,72 @@ NC=='\033[0m' # No Color
 chmod +x bashscript_countdown.sh
 ls -al
 code .
+
+#####################################################################################################
+#####################################################################################################
+# file_mvc (Install)
+# file_mvc (Install)
+file_mvc() {
+    # Geriye Sayım
+    ./bashscript_countdown.sh
+
+    echo -e "\n\e[36m\n###### MVC için dosya yapıları ######\e[0m"
+    echo -e "\e[33mMVC için dosya yapıları yüklemek ister misiniz? [e/h]\e[0m"
+    read -p "" mvc
+
+    if [[ "$mvc" == "e" || "$mvc" == "E" ]]; then
+        echo -e "\e[32mMVC için dosya yapıları...\e[0m"
+
+        # Geriye Sayım
+        ./bashscript_countdown.sh
+
+        # pictures klasörü yoksa oluştur
+        if [ ! -d "pictures" ]; then
+            mkdir models
+            echo "models klasörü oluşturuldu."
+        else
+            echo "models klasörü zaten mevcut."
+        fi
+
+        # models klasörü yoksa oluştur
+        if [ ! -d "models" ]; then
+            mkdir models
+            echo "models klasörü oluşturuldu."
+        else
+            echo "models klasörü zaten mevcut."
+        fi
+
+        # public klasörü yoksa oluştur
+        if [ ! -d "public" ]; then
+            mkdir -p public/admin/js
+            mkdir -p public/admin/css
+            echo "public klasörü oluşturuldu."
+        else
+            echo "public klasörü zaten mevcut."
+        fi
+
+        # routes klasörü yoksa oluştur
+        if [ ! -d "routes" ]; then
+            mkdir routes
+            echo "routes klasörü oluşturuldu."
+        else
+            echo "routes klasörü zaten mevcut."
+        fi
+
+        # views klasörü yoksa oluştur
+        if [ ! -d "views" ]; then
+            mkdir views
+            echo "views klasörü oluşturuldu."
+        else
+            echo "views klasörü zaten mevcut."
+        fi
+    else
+        echo -e "\e[31mNpm Save Yüklenmeye Başlanmadı ....\e[0m"
+    fi        
+}
+
+# Fonksiyonu çalıştır
+file_mvc
 
 #####################################################################################################
 #####################################################################################################
@@ -75,7 +142,7 @@ create_empty_files_if_not_exists() {
 
 # Fonksiyon çağrısı
 # Örnek olarak tüm dosyalar için çağrı
-create_empty_files_if_not_exists Dockerfile docker-compose.yml .gitlab-ci.yml  Readme.md style.css test.py shorting_keyboard.txt
+create_empty_files_if_not_exists Dockerfile docker-compose.yml .gitlab-ci.yml  Readme.md style.css test.py shorting_keyboard.txt test.sh
 
 #####################################################################################################
 #####################################################################################################
@@ -331,7 +398,7 @@ npm_global_save
 #####################################################################################################
 # Typescript (Install)
 typescript_install() {
-    
+
     # Geriye Sayım
     ./bashscript_countdown.sh
     #if [ -f "./bashscript_countdown.sh" ]; then
@@ -612,6 +679,45 @@ EOL
 
 # Fonksiyonu çalıştır
 server_start
+
+
+#####################################################################################################
+#####################################################################################################
+# Npm Compiler (Install)
+mongo_env() {
+    # Geriye Say
+    ./bashscript_countdown.sh
+
+    echo -e "\e[36m\n###### ${MONGO_ENV} ######  \e[0m"
+    echo -e "\e[33mMongo için .env oluşturulsun mu ? e/h\e[0m"
+    read -p "" mongoEnvResult
+    if [[ $mongoEnvResult == "e" || $mongoEnvResult == "E" ]]; then
+        echo -e "\e[32mMongoENV ...\e[0m"
+
+        # Geriye Sayım
+        ./bashscript_countdown.sh
+
+        # index.js yoksa oluştur
+        if [ ! -f ".env" ]; then
+            echo ".env oluşturuluyor..."
+            cat > .env <<EOL
+MONGO_USERNAME=hamitmizrak
+MONGO_PASSWORD=C5445Xrl
+EOL
+            echo ".env.json oluşturuldu ve içerik eklendi."
+        else
+            echo ".env zaten mevcut."
+        fi
+
+        echo -e "\e[32m.env kurulumu tamamlandı!\e[0m"
+    else
+        echo -e "\e[31m.env kurulumu iptal edildi.\e[0m"
+    fi
+}
+
+# Fonksiyonu çalıştır
+mongo_env
+
 
 #####################################################################################################
 #####################################################################################################
