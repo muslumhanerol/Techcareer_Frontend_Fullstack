@@ -1,4 +1,4 @@
-
+##Bu yüklemeleri yapmak için terminalde ./bashscript_npm_install.sh komutunu çalıştır.
 #!/bin/bash
 
 # Shebang (#!/): Betiğin Bash kabuğu ile çalışacağını gösterir.
