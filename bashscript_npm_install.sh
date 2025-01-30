@@ -593,43 +593,43 @@ npm_compiler
 #####################################################################################################
 #####################################################################################################
 # package.json revize script eklemek
-package_json_script_added() {
-    # Geriye Say
-    ./bashscript_countdown.sh
+# package_json_script_added() {
+#     # Geriye Say
+#     ./bashscript_countdown.sh
 
-    echo -e "\e[36m\n###### package.json Script ekle ######  \e[0m"
-    echo -e "\e[33mpackage.json script eklemek Yüklemek İster misiniz? e/h\e[0m"
-    read -p "" packageJsonScriptResult
-    if [[ $packageJsonScriptResult == "e" || $packageJsonScriptResult == "E" ]]; then
-        echo -e "\e[32m package.json Script Yüklenmeye başlandı...\e[0m"
-        # package.json dosyasının varlığını kontrol et
-        PACKAGE_JSON="package.json"
-        if [ ! -f "$PACKAGE_JSON" ]; then
-            echo "package.json dosyası bulunamadı. Script sonlandırılıyor."
-            exit 1
-        fi
+#     echo -e "\e[36m\n###### package.json Script ekle ######  \e[0m"
+#     echo -e "\e[33mpackage.json script eklemek Yüklemek İster misiniz? e/h\e[0m"
+#     read -p "" packageJsonScriptResult
+#     if [[ $packageJsonScriptResult == "e" || $packageJsonScriptResult == "E" ]]; then
+#         echo -e "\e[32m package.json Script Yüklenmeye başlandı...\e[0m"
+#         # package.json dosyasının varlığını kontrol et
+#         PACKAGE_JSON="package.json"
+#         if [ ! -f "$PACKAGE_JSON" ]; then
+#             echo "package.json dosyası bulunamadı. Script sonlandırılıyor."
+#             exit 1
+#         fi
 
-        # Yeni scriptler JSON formatında tanımlanıyor
-        NEW_SCRIPTS=',\"server:start\": \"lite-server\",\n      \"build_watch\": \"tsc -w --pretty\",\n  \"nodemon_app_watch\": \"nodemon --watch src --watch dist ./dist/index.js\",\n  \"dev:seri\": \"npm-run-all --serial build_watch nodemon_app_watch\",\n  \"dev:paralel\": \"concurrently -k \\\"npm run build_watch\\\" \\\"npm run nodemon_app_watch\\\" \\\"npm run server:start\\\"\"'
+#         # Yeni scriptler JSON formatında tanımlanıyor
+#         NEW_SCRIPTS=',\"server:start\": \"lite-server\",\n      \"build_watch\": \"tsc -w --pretty\",\n  \"nodemon_app_watch\": \"nodemon --watch src --watch dist ./dist/index.js\",\n  \"dev:seri\": \"npm-run-all --serial build_watch nodemon_app_watch\",\n  \"dev:paralel\": \"concurrently -k \\\"npm run build_watch\\\" \\\"npm run nodemon_app_watch\\\" \\\"npm run server:start\\\"\"'
 
-        # "scripts" alanını bul ve "test" scriptinden sonra yeni scriptleri ekle
-        sed -i.bak "/\"test\": /a \
-  $NEW_SCRIPTS" "$PACKAGE_JSON"
+#         # "scripts" alanını bul ve "test" scriptinden sonra yeni scriptleri ekle
+#         sed -i.bak "/\"test\": /a \
+#   $NEW_SCRIPTS" "$PACKAGE_JSON"
 
-        # İşlem tamamlandı mesajı
-        if [ $? -eq 0 ]; then
-            echo "Scripts başarıyla eklendi. Güncellenmiş package.json dosyası:\n"
-            cat "$PACKAGE_JSON"
-        else
-            echo "Scripts eklenirken bir hata oluştu."
-            exit 1
-        fi
+#         # İşlem tamamlandı mesajı
+#         if [ $? -eq 0 ]; then
+#             echo "Scripts başarıyla eklendi. Güncellenmiş package.json dosyası:\n"
+#             cat "$PACKAGE_JSON"
+#         else
+#             echo "Scripts eklenirken bir hata oluştu."
+#             exit 1
+#         fi
 
-    else
-        echo -e "\e[31mNpm Global Save Yüklenmeye Başlanmadı....\e[0m"
-    fi
-}
-package_json_script_added
+#     else
+#         echo -e "\e[31mNpm Global Save Yüklenmeye Başlanmadı....\e[0m"
+#     fi
+# }
+# package_json_script_added
 
 #####################################################################################################
 #####################################################################################################
