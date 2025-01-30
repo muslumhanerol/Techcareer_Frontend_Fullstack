@@ -1,6 +1,6 @@
 # Techcareer Frontend Full Stack- Dockerize
 
-[GitHub Address](https://github.com/muslumhanerol/techcareer_frontend_fullstack_with_docker)
+[GitHub Address](https://github.com/hamitmizrak/2025_techcareer_frontend_fullstack_1.git)
 [Mongo Database]()
 [Font Awesome](https://fontawesome.com/search?ic=free)
 [Google Font](https://fonts.google.com/selection/embed)
@@ -34,7 +34,7 @@ git branch
 git pull
 git pull origin master
 
-git clone https://github.com/muslumhanerol/techcareer_frontend_fullstack_with_docker
+git clone https://github.com/hamitmizrak/2025_techcareer_frontend_fullstack_1.git
 ```
 ---
 

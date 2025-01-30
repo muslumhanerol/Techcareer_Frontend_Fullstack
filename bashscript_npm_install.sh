@@ -1,5 +1,3 @@
-## Çalıştırmak için terminale ./bashscript_npm_install.sh yaz.
-## Projeyi çalıştırmak için terminale npm run dev:paralel yaz.
 
 #!/bin/bash
 
