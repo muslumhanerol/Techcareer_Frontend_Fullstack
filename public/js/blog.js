@@ -62,7 +62,8 @@ $(document).ready(function () {
 
     // Blog Form'da verileri almak için
     const blogDataCreate = {
-      // Blog Form'da verileri almak için
+      // blog.ejs de Blog Form'da verileri almak için id leri kullandım.
+      //.val() = veriyi almak için.
       header: $("#header").val(),
       content: $("#content").val(),
       author: $("#author").val(),
