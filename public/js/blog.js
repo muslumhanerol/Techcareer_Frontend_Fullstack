@@ -98,7 +98,7 @@ $(document).ready(function () {
   // Güncelleme teble üzerinden yapılacak. str 112 blog.ejs
   $("#blog-table tbody").on("click", ".edit-btn", function () {
     //alert("güncelleme");
-    const row = $(this).closest("tr");
+    const row = $(this).closest("tr"); //this= Hangisine tıklandıysa.
     const id = row.data("id");
 
     // Onay Mesajı
@@ -120,7 +120,7 @@ $(document).ready(function () {
 
       $("#blog-form")
         .off("submit")
-        .on("submit", function (event) {
+        .on("submit", function (event) { //submit e tıklandıktan sonra func çalışsın.
           event.preventDefault();
           const blogData = {
             header: $("#header").val(),
