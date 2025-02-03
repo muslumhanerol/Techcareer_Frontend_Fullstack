@@ -95,6 +95,7 @@ $(document).ready(function () {
 
   /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   // Blog Güncelleme
+  // Güncelleme teble üzerinden yapılacak. str 112 blog.ejs
   $("#blog-table tbody").on("click", ".edit-btn", function () {
     //alert("güncelleme");
     const row = $(this).closest("tr");
