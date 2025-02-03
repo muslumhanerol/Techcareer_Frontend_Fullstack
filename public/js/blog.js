@@ -10,14 +10,14 @@ $(document).ready(function () {
   // Formu Temizleme Functionu
   const reset = () => {
     // Formu temizlemek için
-    $("#blog-form")[0].reset();
+    $("#blog-form")[0].reset(); //str45 #blog-form = blog.ejs deki blog-form id ye eriştik.
   };
 
   /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   // Blog List
   function blogList() {
     $.ajax({
-      url: "/blog",
+      url: "/blog", //str45 /blog = blog.ejs deki action="/blog". Forma tıklandığında bu handle 
       method: "GET",
       success: function (data) {
         // blogList function içerik listesini temizlemek için kullandım.
@@ -25,6 +25,7 @@ $(document).ready(function () {
 
         // forEach
         data.forEach(function (item) {
+          //blog.ejs str112 #blog-table içerisindeki tbody ye ekleme yap.
           $("#blog-table tbody").append(`
                 <tr data-id="${item._id}">
                     <td>${item._id}</td>
@@ -144,7 +145,7 @@ $(document).ready(function () {
     } //end else
   }); //end Güncelleme
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   // Blog Silme
   // confirm
   $("#blog-table tbody").on("click", ".delete-btn", function () {
