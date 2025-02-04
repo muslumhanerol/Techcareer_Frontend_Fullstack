@@ -1,5 +1,9 @@
 // http://localhost:1111/daily/list
 console.info("server.js Server 1111 portunda ayağa kalktı");
+// Bitirme Projesi
+// username
+// password
+// email
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Import
@@ -72,7 +76,7 @@ if (process.env.NODE_ENV !== "production") {
 const databaseLocalUrl = "mongodb://localhost:27017/blogDB";
 
 // 2.YOL (LOCALHOST)
-const databaseDockerUrl = "mongodb://localhost:27017/blogDB";
+const databaseDockerUrl = "mongodb://localhost:27000/blogDB";
 
 // MongoDB Cloud (username,password)
 // 3.YOL (CLOUD)
